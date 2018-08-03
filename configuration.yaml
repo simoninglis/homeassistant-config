@@ -206,31 +206,11 @@ media_extractor:
        video: bestvideo
        music: bestaudio[ext=mp3]
 
-# apple_tv:
-#  - host: 172.16.4.5
-#    login_id: 00000000-10a9-6ca9-9947-319f90dc41cc
-#    name: lounge_tv
-
 
 media_player:
-#  - platform: sonos
-#    interface: 172.16.4.16
-#    hosts:
-##     - 172.16.4.70 Boost
-#      - 172.16.4.56 # Kitchen
-#      - 172.16.4.51 # Playbar lounge
-##     - 172.16.4.55 # Sub lounge
-#      - 172.16.4.68 # Master
-#      - 172.16.4.67 # Office
   - platform: plex
     
 group: !include groups.yaml
-
-automation: !include_dir_merge_list automations
-
-# scene: !include_dir_merge_list scenes
-
-script: !include_dir_merge_named scripts
 
 input_boolean:
   restart:
@@ -430,24 +410,8 @@ zwave:
   usb_path: /dev/ttyACM0
   network_key: !secret zwave_key
 
-python_script:
- 
-# alexa:
-#    intents: !include alexa.yaml
-
-# emulated_hue:
-# host_ip: 172.16.4.11
-#   listen_port: 8300
-#   expose_by_default: true
-#   exposed_domains:
-#    - light
-#    - switch
-#    - script
-#    - input_boolean
-
 climate:
   - platform: zwave
-
 
 cloud:
   alexa: 
