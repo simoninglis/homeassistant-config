@@ -4421,3 +4421,30 @@
 2018-08-03 14:39:59.275 Detail, 
 2018-08-03 14:39:59.275 Detail, Node012, Removing current message
 2018-08-03 14:39:59.275 Detail, Node012, Notification: Notification - Node Asleep
+2018-08-03 15:02:37.830 Detail, Node004,   Received: 0x01, 0x10, 0x00, 0x04, 0x00, 0x04, 0x0a, 0x32, 0x02, 0x21, 0x44, 0x00, 0x00, 0x00, 0xbf, 0x00, 0x00, 0x0f
+2018-08-03 15:02:37.830 Detail, 
+2018-08-03 15:02:37.830 Detail, Node004, Refreshed Value: old value=false, new value=false, type=bool
+2018-08-03 15:02:37.830 Detail, Node004, Changes to this value are not verified
+2018-08-03 15:02:37.830 Info, Node004, Received Meter report from node 4: Energy=1.91kWh
+2018-08-03 15:02:37.830 Detail, Node004, Refreshed Value: old value=1.91, new value=1.91, type=decimal
+2018-08-03 15:02:37.830 Detail, Node004, Changes to this value are not verified
+2018-08-03 15:02:37.830 Detail, Node004, Notification: ValueChanged
+2018-08-03 15:02:37.832 Detail, Node004, Notification: ValueChanged
+2018-08-03 15:02:41.828 Detail, Node004,   Received: 0x01, 0x0e, 0x00, 0x04, 0x00, 0x04, 0x08, 0x32, 0x02, 0x21, 0x32, 0x00, 0x00, 0x00, 0x00, 0xda
+2018-08-03 15:02:41.828 Detail, 
+2018-08-03 15:02:41.828 Detail, Node004, Refreshed Value: old value=false, new value=false, type=bool
+2018-08-03 15:02:41.828 Detail, Node004, Changes to this value are not verified
+2018-08-03 15:02:41.828 Info, Node004, Received Meter report from node 4: Power=0.0W
+2018-08-03 15:02:41.828 Detail, Node004, Refreshed Value: old value=0.0, new value=0.0, type=decimal
+2018-08-03 15:02:41.828 Detail, Node004, Changes to this value are not verified
+2018-08-03 15:02:41.828 Detail, Node004, Notification: ValueChanged
+2018-08-03 15:02:41.830 Detail, Node004, Notification: ValueChanged
+2018-08-03 15:04:28.506 Detail, Node002,   Received: 0x01, 0x10, 0x00, 0x04, 0x00, 0x02, 0x0a, 0x32, 0x02, 0x21, 0x44, 0x00, 0x00, 0x03, 0xe9, 0x00, 0x00, 0x5c
+2018-08-03 15:04:28.506 Detail, 
+2018-08-03 15:04:28.506 Detail, Node002, Refreshed Value: old value=false, new value=false, type=bool
+2018-08-03 15:04:28.506 Detail, Node002, Changes to this value are not verified
+2018-08-03 15:04:28.506 Info, Node002, Received Meter report from node 2: Energy=10.01kWh
+2018-08-03 15:04:28.506 Detail, Node002, Refreshed Value: old value=10.01, new value=10.01, type=decimal
+2018-08-03 15:04:28.506 Detail, Node002, Changes to this value are not verified
+2018-08-03 15:04:28.506 Detail, Node002, Notification: ValueChanged
+2018-08-03 15:04:28.508 Detail, Node002, Notification: ValueChanged
