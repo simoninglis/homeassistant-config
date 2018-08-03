@@ -1,0 +1,501 @@
+homeassistant:
+  name: Home
+  latitude: -27.513745
+  longitude: 153.065264
+  elevation: 13
+  unit_system: metric
+  time_zone: Australia/Brisbane
+
+zone:
+  - name: Home
+    latitude: -27.513745
+    longitude: 153.065264
+    radius: 100
+    icon: mdi:home
+  - name: front_door
+    latitude: -27.513745
+    longitude: 153.065264
+    radius: 10
+    icon: mdi:door
+  - name: driveway
+    latitude: -27.513745
+    longitude: 153.065264
+    radius: 10
+    icon: mdi:car
+
+proximity:
+    simon_home:
+      zone: home
+      devices:
+        - device_tracker.simon_iphone_ot
+        - device_tracker.simon_iphone
+      tolerance: 50
+      unit_of_measurement: m
+    nancy_home:
+      zone: home
+      devices:
+        - device_tracker.nancy_iphone_ot
+        - device_tracker.nancy_iphone
+      tolerance: 50
+      unit_of_measurement: m
+
+map:
+
+frontend:
+
+config:
+
+http:
+  api_password: !secret http_passwd
+  trusted_networks:
+    - 127.0.0.1
+    - ::1
+    - 172.16.4.0/24
+    - 172.17.0.0/16
+    - 10.42.0.0/16
+  ip_ban_enabled: False
+  login_attempts_threshold: 3
+
+updater:
+  include_used_components: true
+
+discovery:
+  enable:
+    - homekit
+
+conversation:
+
+sun:
+
+sensor:
+  - platform: bom
+    station: IDQ60901.94576
+    name: Brisbane
+    monitored_conditions: 
+      - apparent_t
+      - cloud
+      - cloud_base_m
+      - cloud_oktas
+      - cloud_type_id
+      - cloud_type
+      - delta_t
+      - gust_kmh
+      - gust_kt
+      - air_temp
+      - dewpt
+      - press
+      - press_qnh
+      - press_msl
+      - press_tend
+      - rain_trace
+      - rel_hum
+      - sea_state
+      - swell_dir_worded
+      - swell_height
+      - swell_period
+      - vis_km
+      - weather
+      - wind_dir
+      - wind_spd_kmh
+      - wind_spd_kt
+  - platform: fastdotcom
+    minute: 
+      - 0
+      - 30
+  - name: garage_ups
+    platform: nut
+    host: 172.16.4.6
+    resources:
+      - ups.status
+      - battery.charge
+      - battery.runtime
+  - platform: haveibeenpwned
+    email:
+      - simon.inglis@gmail.com
+      - simon.inglis@10fifteen.com
+      - nancy.joe@gmail.com
+  - platform: snmp
+    name: router_load_5min
+    friendly_name: "Router 5 minute load"
+    host: 172.16.4.1
+    baseoid: 1.3.6.1.4.1.2021.10.1.3.2
+  - platform: snmp
+    name: wan_in
+    friendly_name: "WAN in bandwidth"
+    host: 172.16.4.1
+    baseoid: 1.3.6.1.2.1.2.2.1.10.2
+  - platform: snmp
+    name: wan_out
+    friendly_name: "WAN out bandwidth"
+    host: 172.16.4.1
+    baseoid: 1.3.6.1.2.1.2.2.1.16.2
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+  - platform: cert_expiry
+    name: damnatio_cert_expiry
+    host: d.damnatio.net
+    port: 443
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: memory_use_percent
+      - type: load_5m
+  - platform: octoprint
+    name: OctoPrint
+    monitored_conditions:
+      - Current State
+      - Temperatures
+      - Job Percentage
+      
+tts:
+  platform: google
+
+notify:
+  - platform: pushbullet
+    api_key: !secret pushbullet_key
+  - platform: ios
+    push:
+            categories:
+                    - name: Alarm
+                      identifier: 'alarm'
+                      actions:
+                        - identifier: 'SOUND_ALARM'
+                          title: 'Sound Alarm'
+                          activationMode: 'background'
+                          authenticationRequired: no
+                          destructive: yes
+                          behavior: 'default'
+                        - identifier: 'SILENCE_ALARM'
+                          title: 'Silence Alarm'
+                          activationMode: 'background'
+                          authenticationRequired: no
+                          destructive: no
+                          behavior: 'textInput'
+                          textInputButtonTitle: 'Silencio!'
+                          textInputPlaceholder: 'Placeholder'
+
+device_tracker:
+  - platform: unifi
+    host: 172.16.4.15
+    port: 8443
+    username: ha
+    password: !secret unifi_passwd
+    verify_ssl: false
+    interval_seconds: 12
+    consider_home: 12
+    track_new_devices: false
+  - platform: owntracks_http
+    max_gps_acuracy: 200
+    waypoints: True
+    waypoint_whitelist:
+      - singlis
+
+influxdb:
+  host: influxdb.influxdb 
+  port: 8086
+  max_retries: 10
+  default_measurement: state
+
+media_extractor:
+   default_query: worst
+   customize:
+     media_player.apple_tv:
+       video: bestvideo
+       music: bestaudio[ext=mp3]
+
+# apple_tv:
+#  - host: 172.16.4.5
+#    login_id: 00000000-10a9-6ca9-9947-319f90dc41cc
+#    name: lounge_tv
+
+
+media_player:
+#  - platform: sonos
+#    interface: 172.16.4.16
+#    hosts:
+##     - 172.16.4.70 Boost
+#      - 172.16.4.56 # Kitchen
+#      - 172.16.4.51 # Playbar lounge
+##     - 172.16.4.55 # Sub lounge
+#      - 172.16.4.68 # Master
+#      - 172.16.4.67 # Office
+  - platform: plex
+    
+group: !include groups.yaml
+
+automation: !include_dir_merge_list automations
+
+# scene: !include_dir_merge_list scenes
+
+script: !include_dir_merge_named scripts
+
+input_boolean:
+  restart:
+    name: Restart Home Assistant
+    initial: off
+    icon: mdi:restart
+  armed:
+    name: Alarm
+    initial: off
+    icon: mdi:alarm-bell
+  holidays:
+    name: Holidays mode
+    initial: off
+    icon: mdi:airplane
+  sleep_timer:
+    name: Media sleep timer
+    initial: off
+    icon: mdi:timer
+  door_bell:
+    name: Door bell 
+    initial: on
+    icon: mdi:bell
+  presence:
+    name: Presence logic
+    initial: on
+    icon: mdi:account
+  bathroom_fan_humidity:
+    name: Bathroom fan humidity logic
+    initial: on
+  bathroom_fan_light:
+    name: Bathroom fan light logic
+    initial: on
+  scene_abc_news:
+    name: ABC News
+    initial: off
+  scene_night:
+    name: Nightime scene
+    initial: off
+  scene_sonos_join:
+    name: Sonos group
+    initial: off
+  homekit_home:
+    name: Homekit someone is home
+    initial: off
+  alert_smoke:
+    name: Smoke alert
+    initial: off
+
+
+input_select:
+  sleep_timer_duration:
+    name: Sleep timer duration
+    options:
+      - 15
+      - 30
+      - 45
+      - 60
+      - 120
+    initial: 45
+    icon: mdi:timer-sand
+  presence_simon:
+    name: Simon's presence
+    options:
+      - Away
+      - Just arrived
+      - Home
+      - Just left
+      - Extended away
+    initial: Home
+
+input_text:
+  sonos_tts:
+    name: Sonos Text to Speach
+    max: 2000
+
+mysensors:
+  gateways:
+    - device: '/dev/ttyACM1'
+      persistence_file: '/config/mysensors.json'
+      baud_rate: 115200
+  optimistic: false
+  persistence: true
+  retain: true
+  version: 2.0
+
+camera:
+  - platform: generic
+    name: garage_1
+    still_image_url:  http://192.168.1.20/Streaming/channels/1/picture
+    username: admin
+    password: !secret cam_passwd
+  - platform: generic
+    name: garage_2
+    still_image_url:  http://192.168.1.30/Streaming/channels/1/picture
+    username: admin
+    password: !secret cam_passwd
+  - platform: generic
+    name: master_1
+    still_image_url:  http://192.168.1.27/Streaming/channels/1/picture
+    username: admin
+    password: !secret cam_passwd
+
+switch:
+  - platform: command_line
+    switches:
+      retropie:
+        friendly_name: 'RetroPie'
+        command_on: "ssh -i /root/ssh/id_rsa pi@172.16.4.80 sudo shutdown -h"
+        command_off: "ssh -i /root/ssh/id_rsa pi@172.16.4.80 sudo shutdown -h"
+      retropie_reboot:
+        friendly_name: 'RetroPie reboot'
+        command_on: "ssh -i /root/ssh/id_rsa pi@172.16.4.80 sudo reboot"
+        command_off: "ssh -i /root/ssh/id_rsa pi@172.16.4.80 sudo reboot"
+
+binary_sensor:
+  - platform: hikvision
+    name: garage_1
+    host: 192.168.1.20
+    username: admin
+    password: !secret cam_passwd
+    ssl: False
+  - platform: hikvision
+    name: garage_2
+    host: 192.168.1.30
+    username: admin
+    password: !secret cam_passwd
+    ssl: False
+  - platform: hikvision
+    name: master_1 
+    host: 192.168.1.27
+    username: admin
+    password: !secret cam_passwd
+    ssl: False
+  - platform: 'bayesian'
+    name: simon_home
+    friendly_name: 'Simon home'
+    prior: 0.75
+    probability_threshold: 0.90
+    observations:
+        - entity_id: device_tracker.simon_iphone
+          prob_given_true: 0.99
+          prob_given_false: 0.1
+          platform: 'state'
+          to_state: 'home'
+        - entity_id: device_tracker.simon_watch
+          prob_given_true: 0.7
+          prob_given_false: 0.1
+          platform: 'state'
+          to_state: 'home'
+        - entity_id: device_tracker.simon_iphone_ot
+          prob_given_true: 0.9
+          prob_given_false: 0.1
+          platform: 'state'
+          to_state: 'home'
+  - platform: 'bayesian'
+    name: nancy_home
+    friendly_name: 'Nancy home'
+    prior: 0.75
+    probability_threshold: 0.90
+    observations:
+        - entity_id: device_tracker.nancy_iphone
+          prob_given_true: 0.99
+          prob_given_false: 0.1
+          platform: 'state'
+          to_state: 'home'
+        - entity_id: device_tracker.nancy_watch
+          prob_given_true: 0.99
+          prob_given_false: 0.1
+          platform: 'state'
+          to_state: 'home'
+        - entity_id: device_tracker.nancy_iphone_ot
+          prob_given_true: 0.9
+          prob_given_false: 0.1
+          platform: 'state'
+          to_state: 'home'
+  - platform: 'bayesian'
+    name: someone_home
+    friendly_name: 'Someone home'
+    prior: 0.5
+    probability_threshold: 0.50
+    observations:
+        - entity_id: binary_sensor.simon_home
+          prob_given_true: 1
+          platform: 'state'
+          to_state: 'on'
+        - entity_id: binary_sensor.nancy_home
+          prob_given_true: 1
+          platform: 'state'
+          to_state: 'on'
+  - platform: octoprint
+    monitored_conditions:
+      - Printing
+      - Printing Error
+
+
+zwave:
+  usb_path: /dev/ttyACM0
+  network_key: !secret zwave_key
+
+python_script:
+ 
+# alexa:
+#    intents: !include alexa.yaml
+
+# emulated_hue:
+# host_ip: 172.16.4.11
+#   listen_port: 8300
+#   expose_by_default: true
+#   exposed_domains:
+#    - light
+#    - switch
+#    - script
+#    - input_boolean
+
+climate:
+  - platform: zwave
+
+
+cloud:
+  alexa: 
+    filter:
+      exclude_domains:
+         - automation
+         - scene
+         - script
+         - group
+         - cover
+         - alert
+         - sensor
+
+
+logger:
+    default: warn
+    logs:
+        homeassistant.components.mysensors: debug
+
+homekit:
+    ip: 172.16.4.16
+    filter:
+        include_domains:
+          - light
+          - switch
+    
+light:
+  - platform: group
+    name: Lounge lights
+    entities:
+      - light.lounge_dimmer_1_level
+      - light.lounge_dimmer_2_level
+
+
+octoprint:
+  host: 172.16.4.78
+  api_key: !secret octoprint_key
+  bed: true
+  number_of_tools: 1
+
+
+weather:
+  - platform: bom
+    station: IDQ60901.94576
+
+watson_iot:
+  organization: !secret watson_organization
+  type: home_assistant
+  id: ha_01
+  token: !secret watson_token
+

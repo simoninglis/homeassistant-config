@@ -1,0 +1,8 @@
+away_night:
+  alias: 'Away nightime'
+  sequence:
+    - service: script.turn_on
+      entity_id: script.away
+    - service: light.turn_on
+      entity_id:
+        - switch.front_entrance_exterior_switch

@@ -1,0 +1,25 @@
+- alias: 'Restart Home Assistant'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.restart
+      to: 'on' 
+  action:
+     service: homeassistant.restart
+- alias: 'Notify simon proximity'
+  trigger:
+    - platform: state
+      entity_id: proxmity.simon_home
+  action:
+     service: notify.notify
+     data_template:
+         title: "Simon proximity"
+         message: "Simon's state is: {{ proximity.simon_home.dir_of_travel }}"
+- alias: 'Notify simon proximity'
+  trigger:
+    - platform: state
+      entity_id: proxmity.nancy_home
+  action:
+     service: notify.notify
+     data_template:
+         title: "Nancy proximity"
+         message: "Nancy's state is: {{ proximity.nancy_home.dir_of_travel }}"

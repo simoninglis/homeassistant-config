@@ -1,0 +1,21 @@
+daytime:
+  alias: 'Daytime'
+  sequence:
+    - service: lock.lock
+      entity_id: lock.front_door_unlocked
+    - service: light.turn_off
+      entity_id: 
+        - light.lounge_dimmer_1_level
+        - light.lounge_dimmer_2_level
+    - service: switch.turn_off
+      entity_id:
+        - switch.front_entrance_exterior_switch
+        - switch.kitchen_relay_switch
+        - switch.kitchen_relay_switch_2
+    - service: switch.turn_on
+      entity_id:
+        - switch.lounge_entertainment_switch
+        - switch.master_entertainment_switch
+
+    
+

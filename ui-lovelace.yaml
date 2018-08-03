@@ -1,0 +1,105 @@
+title: Home Assitant
+# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
+background: center / cover no-repeat url("/background.png") fixed
+# Exclude entities from "Unused entities" view
+excluded_entities:
+
+views:
+    # View tab title.
+  - icon: mdi:home-assistant
+    title: Home
+    # Optional unique id for direct access /lovelace/${id}
+    id: home
+    # Optional background (overwrites the global background).
+    background: radial-gradient(crimson, skyblue)
+    # Each view can have a different theme applied. Theme should be defined in the frontend.
+    theme: dark-mode
+    # The cards to show on this view.
+    cards:
+        # The filter card will filter entities for their state
+      - type: entity-filter
+        entities:
+          - binary_sensor.simon_home
+          - binary_sensor.nancy_home
+          - binary_sensor.someone_home
+        state_filter:
+          - 'on'
+        card:
+          type: glance
+          title: People that are home
+        # The picture entity card will represent an entity with a picture
+      - type: weather-forecast
+        entity: weather.bom_brisbane
+      - type: entities
+        title: Proximity
+        entities: 
+          - entity: proximity.simon_home
+            name: Simon home
+          - entity: proximity.nancy_home
+            name: Nancy home
+      - type: picture-glance
+        entities:
+          -  camera.garage_1
+        camera_image: camera.garage_1
+      - type: picture-glance
+        entities:
+          -  camera.garage_2
+        camera_image: camera.garage_2
+      - type: media-control
+        entity: media_player.apple_tv_2_2
+    # View tab title.
+  - title: Maps
+    # Optional unique id for direct access /lovelace/${id}
+    id: maps
+    # Each view can have a different theme applied. Theme should be defined in the frontend.
+    theme: dark-mode
+    # The cards to show on this view.
+    cards:
+      - type: map
+        aspect_ratio: 100%
+        entities:
+          - entity: device_tracker.nancy_iphone_ot
+          - entity: device_tracker.simon_iphone_ot
+          - zone.home
+    # View tab title.
+  - title: Alerts
+    # Optional unique id for direct access /lovelace/${id}
+    id: alerts
+    # Each view can have a different theme applied. Theme should be defined in the frontend.
+    theme: dark-mode
+    # The cards to show on this view.
+    cards:
+      - type: entity-filter
+        entities:
+          - binary_sensor.simon_home
+        aspect_ratio: 100%
+  - title: Settings
+    # Optional unique id for direct access /lovelace/${id}
+    id: settings
+    # Each view can have a different theme applied. Theme should be defined in the frontend.
+    theme: dark-mode
+    # The cards to show on this view.
+    cards:
+      - type: entities
+        title: Automation settings
+        entities:
+          - input_select.sleep_timer_duration
+          - input_boolean.restart
+          - input_boolean.armed
+          - input_boolean.holidays
+          - input_boolean.sleep_timer
+          - input_boolean.door_bell
+          - input_boolean.presence
+          - input_boolean.bathroom_fan_humidity
+          - input_boolean.bathroom_fan_light
+      - type: entities
+        title: Status settings
+        entities:
+          - input_boolean.homekit_home
+          - input_boolean.alert_smoke
+          - input_select.presence_simon
+      - type: entities
+        title: Tests
+        entities:
+          - input_text.sonos_tts
+

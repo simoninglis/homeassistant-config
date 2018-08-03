@@ -1,0 +1,369 @@
+
+simon_ipad2:
+  hide_if_away: true
+  icon:
+  mac: AC:CF:5C:21:0D:47
+  name: Simons-iPad-2
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+kids_ipad:
+  hide_if_away: true
+  icon:
+  mac: E0:B9:BA:8B:EF:BE
+  name: Kid's iPad
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+sonoszp:
+  hide_if_away: true
+  icon:
+  mac: 5C:AA:FD:56:53:98
+  name: SonosZP
+  picture:
+  track: false
+  vendor: Sonos, Inc.
+
+nancy_ipad:
+  hide_if_away: true
+  icon:
+  mac: 24:A0:74:33:6D:75
+  name: Nancys-iPad
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+cam:
+  hide_if_away: true
+  icon:
+  mac: 8C:70:5A:C8:BB:08
+  name: Cam
+  picture:
+  track: false
+  vendor: Intel Corporate
+
+simon_watch:
+  hide_if_away: false
+  icon:
+  mac: 38:C9:86:64:7F:D2
+  name: Simon's Apple Watch 
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+desktop_pc:
+  hide_if_away: true
+  icon:
+  mac: C4:E9:84:0B:C3:95
+  name: Desktop PC
+  picture:
+  track: false
+  vendor: TP-LINK TECHNOLOGIES CO.,LTD.
+
+apple_tv:
+  hide_if_away: true
+  icon:
+  mac: C8:69:CD:85:9E:4E
+  name: Apple-TV
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+simon_ipad:
+  hide_if_away: true
+  icon:
+  mac: 6C:19:C0:82:6D:07
+  name: Simons-iPad
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+nancy_iphone:
+  hide_if_away: false
+  icon:
+  mac: D0:A6:37:DD:CA:98
+  name: Nancy's iPhone
+  picture:
+  track: true
+  vendor: unknown
+
+sonoszp_2:
+  hide_if_away: true
+  icon:
+  mac: 5C:AA:FD:AE:87:3A
+  name: SonosZP
+  picture:
+  track: false
+  vendor: unknown
+
+simon_iphone:
+  hide_if_away: false
+  icon:
+  mac: B8:53:AC:1A:18:FF
+  name: Simon's phone
+  picture:
+  track: true
+  vendor: unknown
+
+scales:
+  hide_if_away: true
+  icon:
+  mac: 00:24:E4:08:02:FE
+  name: 0024e40802fe
+  picture:
+  track: false
+  vendor: Withings
+
+chromecast:
+  hide_if_away: true
+  icon:
+  mac: 54:60:09:6D:34:96
+  name: Chromecast
+  picture:
+  track: false
+  vendor: Google, Inc.
+
+millysiphone:
+  hide_if_away: true
+  icon:
+  mac: 0C:3E:9F:C6:01:A7
+  name: Millys-iPhone
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+kindle2c1a256df:
+  hide_if_away: true
+  icon:
+  mac: 40:B4:CD:78:D0:95
+  name: kindle-2c1a256df
+  picture:
+  track: false
+  vendor: Amazon Technologies Inc.
+
+simon_arch_laptop:
+  hide_if_away: false
+  icon:
+  mac: 28:B2:BD:4A:10:32
+  name: Simon's Arch Laptop
+  picture:
+  track: true
+  vendor: Intel Corporate
+
+simon_windows_laptop:
+  hide_if_away: false
+  icon:
+  mac: 84:3A:4B:DA:85:C8
+  name: Simon's Windows Laptop
+  picture:
+  track: true
+  vendor: unknown
+
+sonoszp_3:
+  hide_if_away: false
+  icon:
+  mac: 94:9F:3E:43:62:A4
+  name: SonosZP
+  picture:
+  track: false
+  vendor: Sonos, Inc.
+
+nancy_watch:
+  hide_if_away: false
+  icon:
+  mac: 20:78:F0:98:A0:6A
+  name: Nancy's Apple Watch 
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+sonoszp_4:
+  hide_if_away: false
+  icon:
+  mac: 78:28:CA:10:58:F0
+  name: SonosZP
+  picture:
+  track: false
+  vendor: Sonos, Inc.
+
+sonoszp_5:
+  hide_if_away: false
+  icon:
+  mac: 78:28:CA:10:59:02
+  name: SonosZP
+  picture:
+  track: false
+  vendor: unknown
+
+simon_iphone_ot:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Simon's iPhone OwnTracks
+  picture:
+  track: true
+  vendor:
+
+simon_phone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: simon phone
+  picture:
+  track: true
+  vendor:
+
+nancy_iphone_ot:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Nancy's iPhone OwnTracks
+  picture:
+  track: true
+  vendor:
+
+iphone:
+  hide_if_away: false
+  icon:
+  mac: CC:2D:B7:33:A6:3A
+  name: iPhone
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+laptopr0972hck:
+  hide_if_away: false
+  icon:
+  mac: B0:35:9F:C3:66:94
+  name: LAPTOP-R0972HCK
+  picture:
+  track: false
+  vendor: unknown
+
+appletv:
+  hide_if_away: false
+  icon:
+  mac: 40:CB:C0:CE:FD:38
+  name: Apple-TV
+  picture:
+  track: false
+  vendor: unknown
+
+galaxynote5:
+  hide_if_away: false
+  icon:
+  mac: AC:5F:3E:06:65:C4
+  name: Galaxy-Note5
+  picture:
+  track: true
+  vendor: unknown
+
+gears3decc:
+  hide_if_away: false
+  icon:
+  mac: DC:66:72:0E:6E:CD
+  name: GearS3-DECC
+  picture:
+  track: false
+  vendor: unknown
+
+androidbc384c83cbdcb84b:
+  hide_if_away: false
+  icon:
+  mac: 34:AA:8B:16:CD:8A
+  name: android-bc384c83cbdcb84b
+  picture:
+  track: false
+  vendor: Samsung Electronics Co.,Ltd
+
+honor_6x:
+  hide_if_away: false
+  icon:
+  mac: 50:01:D9:70:61:5E
+  name: Honor 6X
+  picture:
+  track: false
+  vendor: HUAWEI TECHNOLOGIES CO.,LTD
+
+d0ff98b23874:
+  hide_if_away: false
+  icon:
+  mac: D0:FF:98:B2:38:74
+  name: d0ff98b23874
+  picture:
+  track: false
+  vendor: unknown
+
+10a4bed8f904:
+  hide_if_away: false
+  icon:
+  mac: 10:A4:BE:D8:F9:04
+  name: 10a4bed8f904
+  picture:
+  track: false
+  vendor: unknown
+
+f8633f485c1f:
+  hide_if_away: false
+  icon:
+  mac: F8:63:3F:48:5C:1F
+  name: f8633f485c1f
+  picture:
+  track: false
+  vendor: Intel Corporate
+
+iphone_2:
+  hide_if_away: false
+  icon:
+  mac: 70:EF:00:35:31:D5
+  name: iPhone
+  picture:
+  track: false
+  vendor: unknown
+
+b827ebbab3f2:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:BA:B3:F2
+  name: b827ebbab3f2
+  picture:
+  track: false
+  vendor: Raspberry Pi Foundation
+
+octopi:
+  hide_if_away: false
+  icon:
+  mac: 00:13:EF:F5:08:41
+  name: octopi
+  picture:
+  track: false
+  vendor: Kingjon Digital Technology Co.,Ltd
+
+rozalcarsiphone:
+  hide_if_away: false
+  icon:
+  mac: 78:88:6D:8D:0D:D9
+  name: RozAlcarsiPhone
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+linzsiphone:
+  hide_if_away: false
+  icon:
+  mac: 58:40:4E:D2:90:DD
+  name: Linzs-iphone
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+retropie:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:FA:54:68
+  name: retropie
+  picture:
+  track: false
+  vendor: unknown

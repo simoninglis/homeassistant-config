@@ -1,0 +1,576 @@
+binary_sensor.garage_2_pir_alarm:
+  name: Garage Storage Motion
+  platform: hikvision
+  unique_id: 55080ae4-6a37-11b3-81a7-1868cb4eec7f.PIR Alarm.1
+binary_sensor.garage_1_line_crossing:
+  name:
+  platform: hikvision
+  unique_id: f8460fec-63ed-11b3-819f-bcad2827d351.Line Crossing.1
+media_player.plex_web_firefox:
+  name:
+  platform: plex
+  unique_id: 1zjkx05foyv3o2z22psu968b
+media_player.office:
+  name: Office sonos
+  platform: sonos
+  unique_id: RINCON_7828CA1058F001400
+media_player.kitchen:
+  name: Kitchen sonos
+  platform: sonos
+  unique_id: RINCON_5CAAFD56539801400
+media_player.master_bedroom:
+  name: Master bedroom sonos
+  platform: sonos
+  unique_id: RINCON_7828CA10590201400
+media_player.lounge:
+  name: Lounge sonos
+  platform: sonos
+  unique_id: RINCON_5CAAFDAE873A01400
+sensor.simons_ipad_battery_state:
+  name: Simons iPad battery state
+  platform: ios
+  unique_id: state_simons_ipad
+sensor.simons_ipad_battery_level:
+  name: Simons iPad battery level
+  platform: ios
+  unique_id: level_simons_ipad
+sensor.simons_iphone_battery_level:
+  name: Simons iPhone battery level
+  platform: ios
+  unique_id: level_simon_phone
+sensor.simons_iphone_battery_state:
+  name: Simons iPhone battery state
+  platform: ios
+  unique_id: state_simon_phone
+sensor.lounge_dimmer_1_power:
+  name: 
+  platform: zwave
+  unique_id: 2-72057594076479554
+sensor.lounge_dimmer_1_energy:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076495874
+sensor.lounge_dimmer_1_power_2:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076496002
+sensor.lounge_dimmer_1_exporting:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076496384
+sensor.lounge_dimmer_1_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528065
+sensor.lounge_dimmer_1_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528081
+sensor.lounge_dimmer_1_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528097
+sensor.lounge_dimmer_1_heat:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528177
+sensor.lounge_dimmer_1_power_management:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528241
+sensor.lounge_dimmer_1_system:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528257
+light.lounge_dimmer_1_level:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076299265
+light.lounge_dimmer_1_level_2:
+  name:
+  platform: zwave
+  unique_id: 2-144115188114227201
+light.lounge_dimmer_2_level:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093076481
+light.lounge_dimmer_2_level_2:
+  name:
+  platform: zwave
+  unique_id: 3-144115188131004417
+sensor.lounge_dimmer_2_power:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093256770
+sensor.lounge_dimmer_2_energy:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093273090
+sensor.lounge_dimmer_2_power_2:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093273218
+sensor.lounge_dimmer_2_previous_reading:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093273234
+sensor.lounge_dimmer_2_interval:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093273251
+sensor.lounge_dimmer_2_exporting:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093273600
+sensor.lounge_dimmer_2_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305281
+sensor.lounge_dimmer_2_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305297
+sensor.lounge_dimmer_2_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305313
+sensor.lounge_dimmer_2_heat:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305393
+sensor.lounge_dimmer_2_power_management:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305457
+sensor.lounge_dimmer_2_system:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305473
+media_player.master_bedroom_tv:
+  name:
+  platform: apple_tv
+  unique_id: 9a7f8beed03ef81b799e7b485898580b9c5bba6aca057a5762a7e620c0037b39
+media_player.lounge_tv:
+  name:
+  platform: apple_tv
+  unique_id: c4c5d85b8675035751cee2fe541c4224c6745ae40d1eeb35d59af588cb44ed64
+switch.courtyard:
+  name:
+  platform: zwave
+  unique_id: 4-72057594109837312
+switch.backyard:
+  name:
+  platform: zwave
+  unique_id: 4-144115188147765248
+sensor.courtyard_energy:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050306
+sensor.backyard_energy:
+  name:
+  platform: zwave
+  unique_id: 4-144115188147978242
+sensor.courtyard_power:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050434
+sensor.courtyard_exporting:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050816
+sensor.backyard_power:
+  name:
+  platform: zwave
+  unique_id: 4-144115188147978370
+sensor.backyard_exporting:
+  name:
+  platform: zwave
+  unique_id: 4-144115188147978752
+sensor.courtyard_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082497
+sensor.couryard_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082513
+sensor.courtyard_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082529
+sensor.courtyard_heat:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082609
+sensor.courtyard_power_management:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082673
+switch.front_entrance:
+  name:
+  platform: zwave
+  unique_id: 6-72057594143391744
+switch.front_entrance_2:
+  name:
+  platform: zwave
+  unique_id: 6-144115188181319680
+remote.master_bedroom_tv:
+  name:
+  platform: apple_tv
+  unique_id: 9a7f8beed03ef81b799e7b485898580b9c5bba6aca057a5762a7e620c0037b39
+remote.lounge_tv:
+  name:
+  platform: apple_tv
+  unique_id: c4c5d85b8675035751cee2fe541c4224c6745ae40d1eeb35d59af588cb44ed64
+lock.front_door:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161168384
+sensor.front_door_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414145
+sensor.front_door_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414161
+switch.bedside_lamp:
+  name:
+  platform: zwave
+  unique_id: 8-72057594176946176
+sensor.bedside_lamp_energy:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177159170
+sensor.bedside_lamp_previous_reading:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177159186
+sensor.bedside_lamp_power:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177159298
+sensor.bedside_lamp_voltage:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177159426
+sensor.bedside_lamp_current:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177159490
+switch.lounge_entertainment:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193723392
+sensor.lounge_entertainment_energy:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193936386
+sensor.lounge_entertainment_previous_reading:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193936402
+sensor.lounge_entertainment_power:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193936514
+sensor.lounge_entertainment_voltage:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193936642
+sensor.lounge_entertainment_current:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193936706
+switch.entrance:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210500608
+switch.kitchen:
+  name:
+  platform: zwave
+  unique_id: 10-144115188248428544
+switch.bathroom:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227277824
+switch.bathroom_fan:
+  name:
+  platform: zwave
+  unique_id: 11-144115188265205760
+switch.bathroom_relay_switch_3:
+  name:
+  platform: zwave
+  unique_id: 11-216172782303133696
+switch.bathroom_relay_switch_4:
+  name:
+  platform: zwave
+  unique_id: 11-288230376341061632
+switch.bathroom_relay_switch_5:
+  name:
+  platform: zwave
+  unique_id: 11-360287970378989568
+switch.bathroom_relay_switch_6:
+  name:
+  platform: zwave
+  unique_id: 11-432345564416917504
+sensor.bathroom_relay_energy:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490818
+sensor.bathroom_relay_energy_2:
+  name:
+  platform: zwave
+  unique_id: 11-144115188265418754
+sensor.bathroom_relay_unknown:
+  name:
+  platform: zwave
+  unique_id: 11-216172782303346690
+sensor.bathroom_relay_unknown_2:
+  name:
+  platform: zwave
+  unique_id: 11-288230376341274626
+sensor.bathroom_relay_unknown_3:
+  name:
+  platform: zwave
+  unique_id: 11-360287970379202562
+sensor.bathroom_relay_unknown_4:
+  name:
+  platform: zwave
+  unique_id: 11-432345564417130498
+sensor.bathroom_relay_previous_reading:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490834
+sensor.bathroom_relay_interval:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490851
+sensor.bathroom_relay_power:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490946
+sensor.bathroom_relay_previous_reading_2:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490962
+sensor.bathroom_relay_interval_2:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490979
+sensor.bathroom_relay_exporting:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227491328
+sensor.bathroom_relay_previous_reading_3:
+  name:
+  platform: zwave
+  unique_id: 11-144115188265418770
+sensor.bathroom_relay_interval_3:
+  name:
+  platform: zwave
+  unique_id: 11-144115188265418787
+sensor.bathroom_relay_power_2:
+  name:
+  platform: zwave
+  unique_id: 11-144115188265418882
+sensor.bathroom_relay_previous_reading_4:
+  name:
+  platform: zwave
+  unique_id: 11-144115188265418898
+sensor.bathroom_relay_interval_4:
+  name:
+  platform: zwave
+  unique_id: 11-144115188265418915
+sensor.bathroom_relay_exporting_2:
+  name:
+  platform: zwave
+  unique_id: 11-144115188265419264
+sensor.bathroom_relay_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523009
+sensor.bathroom_relay_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523025
+sensor.bathroom_relay_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523041
+sensor.bathroom_relay_heat:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523121
+sensor.bathroom_relay_power_management:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523185
+sensor.hall_smoke_temperature:
+  name:
+  platform: zwave
+  unique_id: 12-72057594244251666
+sensor.hall_smoke_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300225
+sensor.hall_smoke_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300241
+sensor.hall_smoke_general:
+  name:
+  platform: zwave
+  unique_id: 12-72057594246004737
+sensor.hall_smoke_smoke:
+  name:
+  platform: zwave
+  unique_id: 12-72057594246004753
+sensor.hall_smoke_heat:
+  name:
+  platform: zwave
+  unique_id: 12-72057594246004801
+sensor.lounge_thermostat_temperature:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261028882
+climate.lounge_thermostat_heating:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261323794
+climate.lounge_thermostat_cooling:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261323810
+climate.lounge_thermostat_unused_4:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261323842
+climate.lounge_thermostat_unused_6:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261323874
+media_player.lounge_plex:
+  name: Lounge Apple TV Plex
+  platform: plex
+  unique_id: 10C4FD51-BAB3-4BE8-9918-80677E203B5F
+media_player.master_bedroom_plex:
+  name: Master Bedroom Apple TV Plex
+  platform: plex
+  unique_id: A6BB10FA-9FCD-4410-8E35-3C9E24DE8B20
+media_player.simons_ipad_plex:
+  name:
+  platform: plex
+  unique_id: 7AA2FF17-3B40-436F-BC02-DC5CCDD5ABCB
+media_player.simons_iphone_plex:
+  name:
+  platform: plex
+  unique_id: 61CAD426-513B-497E-9D6F-124C2BF921BB
+binary_sensor.garage_motion:
+  name:
+  platform: hikvision
+  unique_id: 80f60d08-886b-11b5-8459-b4a3824aaafb.PIR Alarm.1
+media_player.master_bedroom_chromecast:
+  name:
+  platform: cast
+  unique_id: 8b5b13c9-dcd2-a257-d6b9-d611f1ae869e
+media_player.simons_ipad_2:
+  name:
+  platform: plex
+  unique_id: 56C90BF3-600B-44DF-90BF-DB3DD129368F
+media_player.plex_web_chrome:
+  name:
+  platform: plex
+  unique_id: safz1axev4o
+sensor.laundry_exterior_previous_reading:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050450
+sensor.courtyard_interval:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050467
+sensor.backyard_previous_reading:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050322
+sensor.backyard_exterior_interval:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050339
+binary_sensor.front_gate_motion:
+  name:
+  platform: hikvision
+  unique_id: f8460fec-63ed-11b3-819f-bcad2827d351.Motion.1
+binary_sensor.storeroom_motion:
+  name:
+  platform: hikvision
+  unique_id: 55080ae4-6a37-11b3-81a7-1868cb4eec7f.Motion.1
+binary_sensor.garage_motion:
+  name:
+  platform: hikvision
+  unique_id: 80f60d08-886b-11b5-8459-b4a3824aaafb.Motion.1
+zwave.hub:
+  name:
+  platform: zwave
+  unique_id: node-1
+zwave.lounge_dimmer_1:
+  name:
+  platform: zwave
+  unique_id: node-2
+zwave.lounge_dimmer_2:
+  name:
+  platform: zwave
+  unique_id: node-3
+zwave.laundry_exterior:
+  name:
+  platform: zwave
+  unique_id: node-4
+zwave.front_entrance_exterior:
+  name:
+  platform: zwave
+  unique_id: node-6
+zwave.front_door:
+  name:
+  platform: zwave
+  unique_id: node-7
+zwave.master_bedside:
+  name:
+  platform: zwave
+  unique_id: node-8
+zwave.lounge_entertainment:
+  name:
+  platform: zwave
+  unique_id: node-9
+zwave.kitchen_relay:
+  name:
+  platform: zwave
+  unique_id: node-10
+zwave.bathroom_relay:
+  name:
+  platform: zwave
+  unique_id: node-11
+zwave.hall_smoke:
+  name:
+  platform: zwave
+  unique_id: node-12
+zwave.lounge_thermostat:
+  name:
+  platform: zwave
+  unique_id: node-13
+media_player.chrome:
+  name:
+  platform: plex
+  unique_id: 8rd2vfro5cjd0gn1jfq00pl9
+media_player.chrome_2:
+  name:
+  platform: plex
+  unique_id: yup000afapkp04qtl3b7vs8w
+sensor.master_bedside_previous_reading:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177159442
+media_player.chrome_3:
+  name:
+  platform: plex
+  unique_id: dpl3r5s6vd90xlmtk8taaaaf

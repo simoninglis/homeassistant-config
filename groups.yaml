@@ -1,0 +1,269 @@
+# ==============================================
+# Tabs
+# ==============================================
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.rooms
+    - group.climate
+    - group.devices
+    - group.ict
+    - group.security
+    - group.climate_summary
+    - group.lights
+    - group.locks
+    - group.scripts
+    - group.states
+    - group.presence
+    - group.sensors
+    - group.automations
+    - sensor.people_home
+
+rooms:
+  name: Rooms
+  view: yes
+  entities:
+    - group.rm_lounge
+    - group.rm_kitchen
+    - group.rm_entry
+    - group.rm_hall
+
+climate:
+  name: Climate
+  view: yes
+  entities:
+    - group.cl_bom
+    - group.cl_darksky
+    - group.cl_lounge
+    - group.cl_bathroom
+    - group.cl_master
+    - group.cl_kitchen
+
+devices:
+  name: Devices
+  view: yes
+  entities:
+    - group.lights
+    - group.cameras
+    - group.media_players
+    - group.sonoss
+
+scripts:
+  name: Scripts
+  entities:
+    - script.morning
+    - script.daytime
+    - script.away
+    - script.evening
+    - script.night
+    - script.movies
+    - script.leaving
+    - script.sonos_join
+    - script.sonos_split
+    - script.sleep_timer
+
+states:
+  name: State
+  entities:
+    - input_boolean.sleep_timer
+    - input_select.sleep_timer_duration
+    - input_boolean.holidays
+    - input_boolean.armed
+    - input_boolean.restart
+    - input_boolean.scene_night
+    - input_boolean.scene_sonos_group
+    - switch.retropie
+    - switch.retropie_reboot
+
+presence:
+  name: Presence
+  entities:
+    - binary_sensor.someone_home
+    - binary_sensor.simon_home
+    - binary_sensor.nancy_home
+
+sensors:
+  name: Sensors
+  entities:
+    - sensors.nodemanager_7_1
+    - sensors.nodemanager_7_2
+    - sensors.nodemanager_8_1
+    - sensors.nodemanager_8_2
+    - sensors.nodemanager_9_1
+    - sensors.nodemanager_9_2
+
+# ==============================================
+# Rooms groups
+# ==============================================
+rm_lounge:
+  name: Lounge
+  entities:
+   - light.lounge_dimmer_1_level
+   - light.lounge_dimmer_2_level
+   - media_player.apple_tv
+   - media_player.lounge
+
+rm_kitchen:
+  name: Kitchen
+  entities:
+    - media_player.kitchen
+
+rm_entry:
+  name: Entry
+  entities:
+
+rm_hall:
+  name: Hall
+  entities:
+
+# ==============================================
+# Climate groups
+# ==============================================
+cl_bom:
+  name: BOM
+  entities:
+    - sensor.bom_brisbane_air_temp_C
+    - sensor.bom_brisbane_feels_like_c
+    - sensor.bom_brisbane_rain_today
+    - sensor.bom_brisbane_relative_humidity
+cl_darksky:
+  name: DarkSky
+  entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_nearest_storm_distance
+    - sensor.dark_sky_precip_probability
+cl_hall:
+  name: Hall temp 
+  entities:
+    - sensor.hall_smoke_temperature
+cl_bathroom:
+  name: Bathroom temp and humidity
+  entities:
+    - sensor.nodemanager_7_1
+    - sensor.nodemanager_7_2
+cl_master:
+  name: Master temp and humidity
+  entities:
+    - sensor.nodemanager_8_1
+    - sensor.nodemanager_8_2
+cl_kitchen:
+  name: Kitchen temp and humidity and light
+  entities:
+    - sensor.nodemanager_9_1
+    - sensor.nodemanager_9_2
+
+# ==============================================
+# ICT groups
+# ==============================================
+ict:
+  name: ICT
+  view: yes
+  entities:
+   - sensor.fastcom_download
+   - sensor.garage_ups_battery_charge
+   - sensor.garage_ups_status_data
+   - sensor.router_load_5min
+   - sensor.damnatio_cert_expiry
+   - sensor.ram_use
+   - sensor.disk_use_
+   - sensor.average_load_5m
+
+# ==============================================
+# security groups
+# ==============================================
+security:
+  name: security
+  view: yes
+  entities:
+   - camera.garage_1
+   - camera.garage_2
+   - camera.master_1
+   - binary_sensor.garage_1
+   - binary_sensor.garage_2
+   - binary_sensor.master_1
+   - sensor.garage_1_motion
+   - sensor.garage_2_motion
+   - camera.master_1_motion
+
+# ==============================================
+# Device groups
+# ==============================================
+cameras:
+  name: Cameras
+  entities:
+    - camera.garage_1
+    - camera.garage_2
+    - camera.master_1
+    - switch.garage_motion
+
+climate_summary:
+  name: Summary
+  entities:
+   - sensor.ir_lounge_temperature
+   - sensor.nodemanager_11_1
+   - sensor.nodemanager_7_1
+   - sensor.nodemanager_8_1
+   - climate.lounge_ir_cooling_1
+
+lights:
+  name: Lights
+  entities:
+   - light.lounge_lights
+   - light.lounge_dimmer_1_level
+   - light.lounge_dimmer_2_level
+   - switch.laundry_exterior_switch
+   - switch.laundry_exterior_switch_2 
+   - switch.front_entrance_exterior_switch
+   - switch.lounge_entertainment_switch
+   - switch.master_entertainment_switch
+   - switch.bathroom_relay_switch
+   - switch.bathroom_relay_switch_2
+   - switch.kitchen_relay_switch
+   - switch.kitchen_relay_switch_2
+
+lights_exterior:
+  name: ligts_exterior
+  entities:
+   - switch.laundry_exterior_switch
+   - switch.laundry_exterior_switch_2 
+   - switch.front_entrance_exterior_switch
+
+locks:
+  name: Locks
+  entities:
+   - lock.front_door_locked
+
+sonoss:
+  name: Sonoss
+  entities:
+   - media_player.kitchen
+   - media_player.living_room
+
+apple_tvs:
+  name: Apple TVs
+  entities:
+   - media_player.apple_tv
+  
+media_players:
+  name: Media players
+  entities:
+    - group.sonoss
+    - group.apple_tvs
+
+# ==============================================
+# Automations groups
+# ==============================================
+automations:
+  name: Automations 
+  view: yes
+  entities:
+    - input_boolean.presence
+    - input_boolean.bathroom_fan_humidity
+    - input_boolean.bathroom_fan_light
+    - input_boolean.door_bell
+    - input_boolean.scene_abc_news
+    - input_boolean.scene_sonos_join
+    - input_boolean.scene_night
+    - input_text.sonos_tts

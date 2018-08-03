@@ -1,0 +1,92 @@
+switch.faketv_114_0:
+  friendly_name: master_faketv
+sensor.breaches_simoninglisgmailcom:
+  hidden: true
+sensor.breaches_simoninglis10fifteencom:
+  hidden: true
+sensor.breaches_nancyjoegmailcom:
+  hidden: true
+sensor.eternal_damnation_battery_level:
+  hidden: true
+sensor.eternal_damnation_battery_state:
+  hidden: true
+sensor.garage_ups_status_data:
+  hidden: true
+group.all_lights:
+  hidden: false
+switch.laundry_exterior_switch:
+  friendly_name: Courtyard light
+switch.laundry_exterior_switch_2:
+  friendly_name: Back yard light
+light.lounge_dimmer_1_level:
+  friendly_name: Lounge spot lights
+light.lounge_dimmer_1_level_2:
+  hidden: true
+light.lounge_dimmer_2_level:
+  friendly_name: Lounge ceiling light
+light.lounge_dimmer_2_level_2:
+  hidden: true
+switch.front_entrance_exterior_switch:
+  friendly_name: Front lights
+lock.front_door_locked:
+  friendly_name: Front door
+switch.lounge_entertainment_switch:
+  friendly_name: Lounge media centre
+switch.master_entertainment_switch:
+  friendly_name: Master bedside lamp
+switch.bathroom_relay_switch:
+  friendly_name: Bathroom light
+switch.bathroom_relay_switch_2:
+  friendly_name: Bathroom fan
+switch.kitchen_relay_switch:
+  friendly_name: Entry light
+switch.kitchen_relay_switch_2:
+  friendly_name: Kitchen light
+sensor.nodemanager_7_1:
+  friendly_name: Bathroom temperature
+sensor.nodemanager_8_1:
+  friendly_name: Master temperature
+sensor.nodemanager_9_1:
+  friendly_name: Kitchen temperature
+sensor.nodemanager_10_1:
+  friendly_name: Garage store temperature
+sensor.nodemanager_11_1:
+  friendly_name: Garage temperature
+sensor.nodemanager_113_1:
+  friendly_name: Lounge temperature
+sensor.nodemanager_114_1:
+  friendly_name: Bed 2 temperature
+sensor.nodemanager_7_2:
+  friendly_name: Bathroom humidity
+sensor.nodemanager_8_2:
+  friendly_name: Master humidity
+sensor.nodemanager_9_2:
+  friendly_name: Kitchen humidity
+sensor.nodemanager_10_2:
+  friendly_name: Garage store humidity
+sensor.nodemanager_11_2:
+  friendly_name: Garage humidity
+sensor.nodemanager_113_2:
+  friendly_name: Lounge humidity
+sensor.nodemanager_114_2:
+  friendly_name: Bed 2 humidity
+switch.retropie:
+  friendly_name: RetroPie
+switch.retropie_reboot:
+  friendly_name: RetroPie reboot
+binary_sensor.nodemanager_113_3:
+  friendly_name: Lounge sliding door
+binary_sensor.nodemanager_114_3:
+  friendly_name: Bed 2 window
+cam.garage_1:
+  friendly_name: Front gate
+cam.garage_2:
+  friendly_name: Garage store
+binary_sensor.simon_home:
+  friendly_name: Simon home
+binary_sensor.nancy_home:
+  friendly_name: Nancy home
+binary_sensor.someone_home:
+  friendly_name: Someone home
+zwave.master_bedside:
+  friendly_name: Master bedside lamp

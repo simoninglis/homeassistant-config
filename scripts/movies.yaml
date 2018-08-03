@@ -1,0 +1,17 @@
+movies:
+  alias: 'Movies'
+  sequence:
+    - service: light.turn_on
+      entity_id: 
+        - light.lounge_dimmer_1_level
+        - light.lounge_dimmer_2_level
+    - service: light.turn_on
+      entity_id: 
+        - light.lounge_dimmer_1_level_2
+        - light.lounge_dimmer_2_level_2
+      data:
+        brightness_pct: 40
+    - service: switch.turn_off
+      entity_id: 
+        - switch.kitchen_relay_switch
+        - switch.kitchen_relay_switch_2

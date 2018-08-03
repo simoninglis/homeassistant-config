@@ -1,0 +1,24 @@
+night:
+  alias: 'Night'
+  sequence:
+    - service: light.turn_off
+      entity_id: 
+        - light.lounge_dimmer_2_level
+        - light.lounge_dimmer_2_level_2
+        - light.lounge_dimmer_1_level
+        - light.lounge_dimmer_1_level_2
+    - service: media_player.media_stop
+      entity_id: 
+        - media_player.apple_tv
+        - media_player.kitchen
+        - media_player.living_room
+    - service: lock.lock
+      entity_id: lock.front_door_locked
+    - service: switch.turn_off
+      entity_id: 
+        - switch.front_entrance_exterior_switch
+        - switch.laundry_exterior_switch
+        - switch.laundry_exterior_switch_2
+        - switch.lounge_entertainment_switch
+        - switch.master_entertainment_switch
+

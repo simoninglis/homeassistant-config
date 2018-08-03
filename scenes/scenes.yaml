@@ -1,0 +1,166 @@
+- name: Movies
+  entities:
+    light.lounge_dimmer_1_level:
+        state: off
+    light.lounge_dimmer_2_level:
+        state: on
+        brightness: 60
+    switch.kitchen_relay_switch:
+        state: off
+    switch.kitchen_relay_switch_2:
+        state: off
+
+- name: Morning
+  entities:
+    light.lounge_dimmer_1_level:
+        state: on
+        brightness: 254
+    light.lounge_dimmer_2_level:
+        state: on
+        brightness: 254
+    switch.front_entrance_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch_2:
+        state: off
+
+- name: Evening
+  entities:
+    light.lounge_dimmer_1_level:
+        state: on
+        brightness: 254
+    light.lounge_dimmer_2_level:
+        state: on
+        brightness: 254
+    switch.front_entrance_exterior_switch:
+        state: off
+    switch.kitchen_relay_switch:
+        state: on
+    switch.kitchen_relay_switch_2:
+        state: on
+
+- name: Night
+  entities:
+    light.lounge_dimmer_1_level:
+        state: off
+    light.lounge_dimmer_2_level:
+        state: off
+    switch.front_entrance_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch_2:
+        state: off
+    lock.front_door_locked:
+        state: locked
+    group.media_players:
+        state: 'paused'
+    switch.lounge_entertainment_switch:
+        state: off
+    switch.kitchen_relay_switch:
+        state: off
+    switch.kitchen_relay_switch_2:
+        state: off
+
+- name: 'Exterior lights'
+  entities:
+    switch.front_entrance_exterior_switch:
+        state: on
+    switch.laundry_exterior_switch:
+        state: on
+    switch.laundry_exterior_switch_2:
+        state: on
+
+- name: 'Exterior lights off'
+  entities:
+    switch.front_entrance_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch_2:
+        state: off
+
+- name: Away
+  entities:
+    light.lounge_dimmer_1_level:
+        state: off
+    light.lounge_dimmer_2_level:
+        state: off
+    switch.front_entrance_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch_2:
+        state: off
+    lock.front_door_locked:
+        state: locked
+    group.media_players:
+        state: 'paused'
+    switch.lounge_entertainment_switch:
+        state: off
+    switch.master_entertainment_switch:
+        state: off
+    switch.kitchen_relay_switch:
+        state: off
+    switch.kitchen_relay_switch_2:
+        state: off
+
+- name: 'Away night'
+  entities:
+    light.lounge_dimmer_1_level:
+        state: on
+        brightness: 100
+    light.lounge_dimmer_2_level:
+        state: off
+    switch.front_entrance_exterior_switch:
+        state: on
+    switch.laundry_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch_2:
+        state: off
+    lock.front_door_locked:
+        state: locked
+    group.media_players:
+        state: 'paused'
+    switch.lounge_entertainment_switch:
+        state: off
+    switch.master_entertainment_switch:
+        state: off
+    switch.kitchen_relay_switch:
+        state: on
+    switch.kitchen_relay_switch_2:
+        state: off
+
+- name: 'Away vaction evening'
+  entities:
+    light.lounge_dimmer_1_level:
+        state: off
+    light.lounge_dimmer_2_level:
+        state: on
+        brightness: 100
+    switch.front_entrance_exterior_switch:
+        state: on
+    switch.laundry_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch_2:
+        state: off
+    lock.front_door_locked:
+        state: locked
+
+
+- name: 'Away vacation night'
+  entities:
+    light.lounge_dimmer_1_level:
+        state: off
+    light.lounge_dimmer_2_level:
+        state: on
+    switch.front_entrance_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch:
+        state: off
+    switch.laundry_exterior_switch_2:
+        state: off
+    lock.front_door_locked:
+        state: locked
+
